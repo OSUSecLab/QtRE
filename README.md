@@ -25,7 +25,7 @@ Please refer to [https://maven.apache.org/install.html](https://maven.apache.org
 
 ```sudo apt install maven```
 
-The maven build config file to build this project is `pom.xml` at the root folder.
+The maven build config file to build this project is `pom.xml` in the root folder, which specifies all the project dependencies and build environment (JAVA version). Please change them accordingly to your settings.
 
 
 ### Ghidra Jar Library
