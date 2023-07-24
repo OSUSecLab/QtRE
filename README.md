@@ -2,7 +2,7 @@
 
 QtRE is a tool tailored for reverse engineering [Qt](https://www.qt.io/) binaries. It is developed atop the [Ghidra](https://ghidra-sre.org/) reverse engineering framework in Java language, and its analysis is conducted at the Ghidra's [PCode IR](https://ghidra.re/ghidra_docs/api/ghidra/program/model/pcode/PcodeOp.html) level. Given a Qt-based binary program, QtRE leverages domain-specific insights in Qt to accomplish the following tasks:
 
-- Recovering Qt-specific function callbacks. QtRE will identify all the `Qt::connect()` type of functions and resolve the callback connection between the function caller (the signal) and the function callee (the callee). Such relationships cannot be resolved by state-of-the-art decompilers by default.
+- Recovering Qt-specific function callbacks. QtRE will identify all the `QObject::connect()` type of functions and resolve the callback connection between the function caller (the signal) and the function callee (the callee). Such relationships cannot be resolved by state-of-the-art decompilers by default.
 
 - Recovering Qt-specific class metadata. QtRE will repurpose the dynamic introspection mechanism of Qt to extract class symbols (e.g., defined signals, slots, attributes, parameters, return types, etc.). It also uses Ghidra's emulator to compute the relative addresses of class attributes.
 
