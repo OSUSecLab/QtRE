@@ -1,0 +1,94 @@
+{
+    "0": {
+        "address": "00118e64",
+        "signalAddress": 1194152,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "timeout",
+        "slotFunction": "FUN_00118140",
+        "slotAddress": 1147200,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "ClassCount": 11,
+    "1": {
+        "address": "001155cc",
+        "signalAddress": 1193272,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "aboutToQuit",
+        "slotFunction": "FUN_00115bc0",
+        "slotAddress": 1137600,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "2": {
+        "address": "00116704",
+        "signalAddress": 1108432,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "KModifierKeyInfoProvider::keyPressed",
+        "slotFunction": "KModifierKeyInfo::keyPressed",
+        "slotAddress": 1107872,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "3": {
+        "address": "0011678c",
+        "signalAddress": 1108208,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "KModifierKeyInfoProvider::keyLatched",
+        "slotFunction": "KModifierKeyInfo::keyLatched",
+        "slotAddress": 1107984,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "4": {
+        "address": "00116814",
+        "signalAddress": 1108320,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "KModifierKeyInfoProvider::keyLocked",
+        "slotFunction": "KModifierKeyInfo::keyLocked",
+        "slotAddress": 1108096,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "5": {
+        "address": "001168a3",
+        "signalAddress": 1109072,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "KModifierKeyInfoProvider::buttonPressed",
+        "slotFunction": "KModifierKeyInfo::buttonPressed",
+        "slotAddress": 1108544,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "6": {
+        "address": "0011692b",
+        "signalAddress": 1107680,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "KModifierKeyInfoProvider::keyAdded",
+        "slotFunction": "KModifierKeyInfo::keyAdded",
+        "slotAddress": 1107488,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "Size": 137552,
+    "7": {
+        "address": "001169b3",
+        "signalAddress": 1107776,
+        "slotClassType": "funptr",
+        "allSolved": true,
+        "signalFunction": "KModifierKeyInfoProvider::keyRemoved",
+        "slotFunction": "KModifierKeyInfo::keyRemoved",
+        "slotAddress": 1107584,
+        "signalClassType": "funptr",
+        "QtConnectType": 1
+    },
+    "Time": 7232,
+    "FunctionCount": 1094
+}

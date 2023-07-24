@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Project Information -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>osu.seclab</groupId>
+    <artifactId>QtRE</artifactId>
+    <version>1.0.0</version>
+    
+    <!-- Project Properties -->
+    <!-- You can define properties here to use them later in the POM -->
+    <!-- For example, setting the Java version -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <!-- Project Dependencies -->
+    <dependencies>
+        <!-- Add your dependencies here -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20200518</version>
+        </dependency>
+
+        <!-- ghidra.jar needs to be manually compiled and added. See https://ghidra-sre.org/InstallationGuide.html#RunJar -->
+        <dependency>
+            <groupId>ghidra</groupId>
+            <artifactId>ghidra</artifactId>
+            <version>9.2.2</version> <!-- TODO: Specify your Ghidra version here -->
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ghidra.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <!-- Build Configuration -->
+    <build>
+        <!-- Source Directory Configuration -->
+        <sourceDirectory>src</sourceDirectory>
+        
+        <!-- Plugins -->
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Compiler Configuration -->
+                    <includeEmptyDirs>true</includeEmptyDirs> <!-- Make sure to include empty dirs for Ghidra-->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Shade Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <transformers>
+                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                            <mainClass>Main.Main</mainClass>
+                        </transformer>
+                    </transformers>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

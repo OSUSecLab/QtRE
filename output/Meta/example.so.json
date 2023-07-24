@@ -1,0 +1,270 @@
+{
+    "ClassCount": 11,
+    "KeySequenceRecorder": {
+        "parent": "QObject",
+        "staticMetaCall": "0010e2b0",
+        "signalCount": 6,
+        "property": {
+            "0": {
+                "name": "isRecording",
+                "flags": 4804609,
+                "type": "Bool",
+                "expression0": "INT_ADD LOAD (const, 0x1b1, 4) INT_ADD (register, 0x38, 8) (const, 0x10, 8) (const, 0x30, 8)"
+            },
+            "1": {
+                "name": "currentKeySequence",
+                "flags": 4804609,
+                "type": "QKeySequence",
+                "expression0": "NULL"
+            },
+            "2": {
+                "name": "window",
+                "flags": 4804875,
+                "type": "-2147483636",
+                "expression0": "INT_ADD LOAD (const, 0x1b1, 4) INT_ADD (register, 0x38, 8) (const, 0x10, 8) (const, 0x28, 8)"
+            },
+            "3": {
+                "name": "modifierlessAllowed",
+                "flags": 4804867,
+                "type": "Bool",
+                "expression0": "INT_ADD LOAD (const, 0x1b1, 4) INT_ADD (register, 0x38, 8) (const, 0x10, 8) (const, 0x32, 8)"
+            },
+            "4": {
+                "name": "multiKeyShortcutsAllowed",
+                "flags": 4804867,
+                "type": "Bool",
+                "expression0": "INT_ADD LOAD (const, 0x1b1, 4) INT_ADD (register, 0x38, 8) (const, 0x10, 8) (const, 0x31, 8)"
+            }
+        },
+        "propertyCount": 5,
+        "slot": {},
+        "methodCount": 6,
+        "metaCall": "0010efa0",
+        "signal": {
+            "0": {
+                "args": {
+                    "0": {
+                        "name": "keySequence",
+                        "type": "QKeySequence"
+                    },
+                    "retType": 43
+                },
+                "name": "gotKeySequence"
+            },
+            "1": {
+                "args": {"retType": 43},
+                "name": "recordingChanged"
+            },
+            "2": {
+                "args": {"retType": 43},
+                "name": "windowChanged"
+            },
+            "3": {
+                "args": {"retType": 43},
+                "name": "currentKeySequenceChanged"
+            },
+            "4": {
+                "args": {"retType": 43},
+                "name": "multiKeyShortcutsAllowedChanged"
+            },
+            "5": {
+                "args": {"retType": 43},
+                "name": "modifierlessAllowedChanged"
+            }
+        },
+        "stringData": "0011a920"
+    },
+    "KModifierKeyInfo": {
+        "parent": "QObject",
+        "staticMetaCall": "0010eab0",
+        "signalCount": 6,
+        "property": {},
+        "propertyCount": 0,
+        "slot": {},
+        "methodCount": 6,
+        "metaCall": "0010f080",
+        "signal": {
+            "0": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "pressed",
+                        "type": "Bool"
+                    }
+                },
+                "name": "keyPressed"
+            },
+            "1": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "latched",
+                        "type": "Bool"
+                    }
+                },
+                "name": "keyLatched"
+            },
+            "2": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "locked",
+                        "type": "Bool"
+                    }
+                },
+                "name": "keyLocked"
+            },
+            "3": {
+                "args": {
+                    "0": {
+                        "name": "button",
+                        "type": "-2147483637"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "pressed",
+                        "type": "Bool"
+                    }
+                },
+                "name": "buttonPressed"
+            },
+            "4": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43
+                },
+                "name": "keyAdded"
+            },
+            "5": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43
+                },
+                "name": "keyRemoved"
+            }
+        },
+        "stringData": "0011a560"
+    },
+    "Size": 137552,
+    "KDateValidator": {
+        "parent": "QValidator",
+        "staticMetaCall": "0010e130",
+        "signalCount": 0,
+        "property": {},
+        "propertyCount": 0,
+        "slot": {},
+        "methodCount": 0,
+        "metaCall": "0010f1c0",
+        "signal": {},
+        "stringData": "0011a7a0"
+    },
+    "Time": 1697,
+    "KModifierKeyInfoProvider": {
+        "parent": "QObject",
+        "staticMetaCall": "0010ecc0",
+        "signalCount": 6,
+        "property": {},
+        "propertyCount": 0,
+        "slot": {},
+        "methodCount": 6,
+        "metaCall": "0010f0f0",
+        "signal": {
+            "0": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "state",
+                        "type": "Bool"
+                    }
+                },
+                "name": "keyLatched"
+            },
+            "1": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "state",
+                        "type": "Bool"
+                    }
+                },
+                "name": "keyLocked"
+            },
+            "2": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "state",
+                        "type": "Bool"
+                    }
+                },
+                "name": "keyPressed"
+            },
+            "3": {
+                "args": {
+                    "0": {
+                        "name": "button",
+                        "type": "-2147483639"
+                    },
+                    "retType": 43,
+                    "1": {
+                        "name": "state",
+                        "type": "Bool"
+                    }
+                },
+                "name": "buttonPressed"
+            },
+            "4": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43
+                },
+                "name": "keyAdded"
+            },
+            "5": {
+                "args": {
+                    "0": {
+                        "name": "key",
+                        "type": "-2147483645"
+                    },
+                    "retType": 43
+                },
+                "name": "keyRemoved"
+            }
+        },
+        "stringData": "0011a1c0"
+    },
+    "FunctionCount": 1094
+}
