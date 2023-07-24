@@ -2,7 +2,7 @@
 
 QtRE is a tool tailored for reverse engineering [Qt](https://www.qt.io/) binaries. It is developed atop the [Ghidra](https://ghidra-sre.org/) reverse engineering framework in Java language, and its analysis is conducted at the Ghidra's [PCode IR](https://ghidra.re/ghidra_docs/api/ghidra/program/model/pcode/PcodeOp.html) level. Given a Qt-based binary program, QtRE leverages domain-specific insights in Qt to accomplish the following tasks:
 
-- Recovering Qt-specific function callbacks. QtRE will identify all the `Qt::connect()`` type of functions and resolve the callback connection between the function caller (the signal) and the function callee (the callee). Such relationships cannot be resolved by state-of-the-art decompilers by default.
+- Recovering Qt-specific function callbacks. QtRE will identify all the `Qt::connect()` type of functions and resolve the callback connection between the function caller (the signal) and the function callee (the callee). Such relationships cannot be resolved by state-of-the-art decompilers by default.
 
 - Recovering Qt-specific class metadata. QtRE will repurpose the dynamic introspection mechanism of Qt to extract class symbols (e.g., defined signals, slots, attributes, parameters, return types, etc.). It also uses Ghidra's emulator to compute the relative addresses of class attributes.
 
@@ -14,14 +14,14 @@ For more details, please refer to our full paper (in USENIX Security 2023): [Egg
 
 ## Prerequisites
 
-QtRE was developed and tested on Java 11.0.19 and Ghidra [v9.2.2](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_9.2.2_build). Please carefully select your build environment before proceed, as some Ghidra APIs used in this project may be deprecated in newer versions.
+QtRE was developed and tested on Java 11.0.19 and Ghidra [v9.2.2](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_9.2.2_build). Please carefully select your build environment before proceeding, as some Ghidra APIs used in this project may be deprecated in newer versions.
 
 To build this project, we recommend using [Apache Maven](https://maven.apache.org/). Below are the detailed instructions:
 
 
 ### Apache Maven
 
-Please refer to [https://maven.apache.org/install.html](https://maven.apache.org/install.html). If you use a Debian-based Linux distributions, simply run:
+Please refer to [https://maven.apache.org/install.html](https://maven.apache.org/install.html). If you use Debian-based Linux distributions, simply run:
 
 ```sudo apt install maven```
 
@@ -80,7 +80,7 @@ You can run it with the following command:
 
 This will run QtRE to analyze the Qt connect callback and class metadata.
 
-Afterwards, the exmaple outputs are generated in `./output/Connect/example.so.json` and `./output/Meta/example.so.json`. These json results include the callback relationships extracted as well as the Qt class metadata and symbols recovered by QtRE.
+Afterwards, the example outputs are generated in `./output/Connect/example.so.json` and `./output/Meta/example.so.json`. These json results include the callback relationships extracted as well as the Qt class metadata and symbols recovered by QtRE.
 
 
 
