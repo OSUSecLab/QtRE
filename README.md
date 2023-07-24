@@ -2,7 +2,7 @@
 
 QtRE is a tool tailored for reverse engineering [Qt](https://www.qt.io/) binaries. It is developed atop the [Ghidra](https://ghidra-sre.org/) reverse engineering framework in Java language, and its analysis is conducted at the Ghidra's [PCode IR](https://ghidra.re/ghidra_docs/api/ghidra/program/model/pcode/PcodeOp.html) level. Given a Qt-based binary program, QtRE leverages domain-specific insights in Qt to accomplish the following tasks:
 
-- Recovering Qt-specific function callbacks. QtRE will identify all the Qt::connect() type of functions and resolve the callback connection between the function caller (the signal) and the function callee (the callee). Such relationships cannot be resolved by state-of-the-art decompilers by default.
+- Recovering Qt-specific function callbacks. QtRE will identify all the `Qt::connect()`` type of functions and resolve the callback connection between the function caller (the signal) and the function callee (the callee). Such relationships cannot be resolved by state-of-the-art decompilers by default.
 
 - Recovering Qt-specific class metadata. QtRE will repurpose the dynamic introspection mechanism of Qt to extract class symbols (e.g., defined signals, slots, attributes, parameters, return types, etc.). It also uses Ghidra's emulator to compute the relative addresses of class attributes.
 
@@ -14,7 +14,7 @@ For more details, please refer to our full paper (in USENIX Security 2023): [Egg
 
 ## Prerequisites
 
-QtRE was tested on Java 11.0.19 and Ghidra [v9.2.2](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_9.2.2_build). Please carefully select your build environment before proceed, as some Ghidra APIs used in this project may be deprecated in newer versions.
+QtRE was developed and tested on Java 11.0.19 and Ghidra [v9.2.2](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_9.2.2_build). Please carefully select your build environment before proceed, as some Ghidra APIs used in this project may be deprecated in newer versions.
 
 To build this project, we recommend using [Apache Maven](https://maven.apache.org/). Below are the detailed instructions:
 
@@ -35,7 +35,7 @@ QtRE depends on the Ghidra library. Since this library dependency cannot be auto
 After you successfully build the JAR file, rename it as `ghidra.jar` and put it under `<QtRE_ROOT>/lib/`.
  
 
-### Compile with Maven
+### Compile QtRE with Maven
 
 Go to the project's main folder and simply run:
 
@@ -76,7 +76,7 @@ We have provided an example Qt binary (`example_qt_bins/example.so`).
 
 You can run it with the following command:
 
-```./run.sh -p QtRE-1.0.0.jar -c env.json --analyze-connect -analyze-meta```
+```./run.sh -p QtRE-1.0.0.jar -c env.json --analyze-connect --analyze-meta```
 
 This will run QtRE to analyze the Qt connect callback and class metadata.
 
@@ -99,7 +99,7 @@ TODOs:
 Please cite our paper if you develop a research work or product based on QtRE.
 
 ```
-@inproceedings{QtRE,
+@inproceedings{QtRE:security23,
   title     = {Egg Hunt in Tesla Infotainment: A First Look at Reverse Engineering of Qt Binaries},
   author    = {Wen, Haohuang and Lin, Zhiqiang},
   booktitle = {32nd {USENIX} Security Symposium ({USENIX} Security 23)},
