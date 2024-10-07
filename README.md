@@ -82,7 +82,9 @@ This will run QtRE to analyze the Qt connect callback and class metadata.
 
 Afterwards, the example outputs are generated in `./output/Connect/example.so.json` and `./output/Meta/example.so.json`. These json results include the callback relationships extracted as well as the Qt class metadata and symbols recovered by QtRE.
 
+## Ghidra GUI Plugin
 
+[QtREAnalyzer](https://github.com/diommsantos/QtREAnalyzer) is a Ghidra Analyzer designed to reverse-engineer binaries that utilize the Qt framework. By implementing QtRE's algorithms, it recovers Qt-specific object and method information, providing valuable insights into binary structures. Kudos to [@diommsantos](https://github.com/diommsantos) who implemented this amazong tool!
 
 ## Limitation & TODOs
 
